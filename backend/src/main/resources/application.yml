@@ -1,0 +1,38 @@
+spring:
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: update
+
+  datasource:
+    # url: jdbc:mysql://${MYSQL_HOST:mysqlDB}:3306/${MYSQL_DATABASE:kientrucphanmem}?useSSL=false
+    # username: ${MYSQL_ROOT:root}
+    # password: ${MYSQL_PASSWORD:123456}
+    # driver-class-name: com.mysql.cj.jdbc.Driver
+
+    url: jdbc:mysql://localhost:3306/kientrucphanmem
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+    # initialization-mode: always
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: hdnguyen7702@gmail.com
+    password: wwjafhpndrhwrhoc
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+          connectiontimeout: 5000
+          timeout: 5000
+          writetimeout: 5000
+system:
+  version: "api/v1"
